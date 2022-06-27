@@ -9,45 +9,52 @@
     <title>Document</title>
 </head>
 <body class="relative">
-    <div class=" flex items-center justify-center shadow-lg relative top-0">
-        <img src="./images/icons8-bbb-200.svg" alt="app-logo" class="w-16 h-16">
-        <h3 class="text-center text-3xl font-serif font-bold underline" id="top">Chat App UI</h3>
+    <div class="flex items-center justify-center shadow-lg w-full top-0 bg-gray-200">
+        <h3 class="text-center inline-flex items-center text-3xl font-test-font font-bold" id="top">
+            <img src="./images/icons8-bbb-200.svg" alt="app-logo" class="w-16 h-16">
+            Chat App UI
+        </h3>
+        <h3 class="px-2 text-xs underline text-purple-400">
+           <a href="https://www.github.com/Q-T5">Check My GitHub➔</a>
+        </h3>
     </div>
 
-    <main class="bg-gradient-to-br from-white to-gray-500 grid grid-cols-1 md:grid-cols-5 space-x-2">
+    <main class="bg-white grid grid-cols-1 md:grid-cols-5 space-x-2 pt-2">
         <div class="hidden md:grid max-h-96 text-center shadow-md sticky">
             <div class="flex flex-col justify-between">
                 <div>
-                    <h3 class="text-black font-bold text-3xl">Controls</h3>
+                    <h3 class="font-bold text-3xl font-heading-font">
+                        Controls <i class="fa fa-sliders"></i>
+                    </h3>
                 </div>
-                <div class="px-2">
+                <div class="px-2 font-body-font">
                     <ul class="space-y-3">
-                        <li class="bg-blue-200 hover:bg-blue-400 py-2 rounded-lg text-xl hover:text-white">
+                        <li class="py-2 border-gray-400 border-2 hover:border-green-400 rounded-sm text-xl">
                             <a href="#">Refresh Chats
                                 <i class="fa fa-refresh ml-1"></i>
                             </a>
                         </li>
 
-                        <li class="bg-blue-200 hover:bg-blue-400 py-2 rounded-lg text-xl hover:text-white">
+                        <li class="py-2 border-gray-400 border-2 hover:border-green-400 rounded-sm text-xl">
                             <a href="#">New Message
                                 <i class="fa fa-plus-square ml-1"></i>
                             </a>
                         </li>
 
-                        <li class="bg-blue-200 hover:bg-blue-400 py-2 rounded-lg text-xl hover:text-white">
+                        <li class="py-2 border-gray-400 border-2 hover:border-green-400 rounded-sm text-xl">
                             <a href="#">App Settings
                                 <i class="fa fa-cogs ml-1"></i>
                             </a>
                         </li>
 
-                        <div class="flex justify-around">
-                            <li class="bg-blue-200 hover:bg-blue-400 py-2 rounded-lg text-lg px-2 hover:text-white">
+                        <div class="flex justify-between">
+                            <li class="py-2 px-1 border-gray-400 border-2 hover:border-red-400 rounded-sm text-lg">
                                 <a href="#">Log Out
                                     <i class="fa fa-sign-out ml-1"></i>
                                 </a>
                             </li>
     
-                            <li class="bg-blue-200 hover:bg-blue-400 py-2 rounded-lg text-lg px-2 hover:text-white">
+                            <li class="py-2 px-1 border-gray-400 border-2 hover:border-green-400 rounded-sm text-lg">
                                 <a href="#">Report Issue
                                     <i class="fa fa-bug ml-1"></i>
                                 </a>
@@ -62,21 +69,21 @@
             </div>
         </div>
         
-        <div class="max-h-full col-span-5 md:col-span-2">
-            <h3 class="text-center text-3xl font-sans font-bold pb-3">
+        <div class="col-span-5 md:col-span-2">
+            <h3 class="text-center text-3xl font-heading-font font-bold pb-3">
                 Chats<i class="fa fa-comments-o px-1"></i>
             </h3>
             <div class="divide-y-2">
-                <button class="w-12 h-12 fixed z-20 right-2 bottom-8 bg-green-200 rounded-full border-4 hover:border-green-500 hover:bg-green-700">
+                <button class="w-12 h-12 fixed z-20 right-2 bottom-8 bg-gray-300 hover:bg-green-300 rounded-full border-4 hover:border-green-500">
                     <a href="#top"><i class="fa fa-arrow-up"></i></a>
                 </button>
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <div class="inline-flex">
                         <img src="./images/random-person-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
-                        <i class="fa fa-thumb-tack text-green-600 self-end"></i>
+                        <i class="fa fa-thumb-tack text-green-600 self-end hover:text-red-500"></i>
                     </div>
-                    <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">My Love</h2>
+                    <div class="flex flex-col space-y-1 w-full hover">
+                        <h2 class="font-bold text-lg font-body-font">My Love</h2>
                         <p>Hello Love?
                             <i class="fa fa-heart px-1 text-red-500"></i>
                         </p>
@@ -100,13 +107,13 @@
                     </div>
                 </div>
     
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <div class="inline-flex">
                         <img src="./images/random-person-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
-                        <i class="fa fa-thumb-tack text-green-600 self-end"></i>
+                        <i class="fa fa-thumb-tack text-green-600 self-end hover:text-red-500"></i>
                     </div>
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Janet Kramer</h2>
+                        <h2 class="font-bold font-body-font text-lg">Janet Kramer</h2>
                         <p>I think Boss is mad at you for skipping work today. You need to come...</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -128,13 +135,13 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <div class="inline-flex">
                         <img src="./images/random-man-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
-                        <i class="fa fa-thumb-tack text-green-600 self-end"></i>
+                        <i class="fa fa-thumb-tack text-green-600 self-end hover:text-red-500"></i>
                     </div>
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Mr. John</h2>
+                        <h2 class="font-bold font-body-font text-lg">Mr. John</h2>
                         <p>Why didn't you show up to work today?</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -156,10 +163,10 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <img src="./images/random-man-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Chris Bro</h2>
+                        <h2 class="font-bold font-body-font text-lg">Chris Bro</h2>
                         <p>Where you at? Come let's go to the club. It's Saturday for God's sake!!</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -181,10 +188,10 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <img src="./images/random-man-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Antony</h2>
+                        <h2 class="font-bold font-body-font text-lg">Antony</h2>
                         <p>I need to play on your PS5, come turn it on.</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -206,10 +213,10 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <img src="./images/random-person-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Samantha</h2>
+                        <h2 class="font-bold font-body-font text-lg">Samantha</h2>
                         <p>Hello</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -231,10 +238,10 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <img src="./images/random-man-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Alex Lawyer</h2>
+                        <h2 class="font-bold font-body-font text-lg">Alex Lawyer</h2>
                         <p>Good afternoon bro! How are you??</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -256,10 +263,10 @@
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3 px-2 hover:bg-gray-100 py-1">
+                <div class="flex items-center space-x-3 px-2 hover:bg-gray-300 py-1">
                     <img src="./images/random-man-image.jpg" alt="profile-picture" class="w-16 h-16 border-4 rounded-full px-0.5 hover:border-green-500">
                     <div class="flex flex-col space-y-1 w-full">
-                        <h2 class="font-bold text-lg">Simon Electrician</h2>
+                        <h2 class="font-bold font-body-font text-lg">Simon Electrician</h2>
                         <p>Should I come over today to fix that bulb issue?</p>
                         <div class="text-right space-x-5">
                             <button class="rounded-full hover:bg-gray-200">
@@ -283,7 +290,32 @@
             </div>
         </div>
 
-        <div class="hidden md:grid md:col-span-2 relative bg-red-200 max-h-min">
+        <div class="hidden md:grid md:col-span-2 h-4/6 shadow-md">
+            <div class="flex flex-col justify-between">
+                <div class="grid grid-cols-2 font-body-font">
+                    <h2 class="text-center text-3xl font-heading-font font-bold pb-3 col-span-2">
+                        Inbox<i class="fa fa-commenting-o pl-1"></i>
+                    </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                        <p class="pt-10">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                </div>
+                <div class="grid grid-cols-10 p-2">
+                    <button class="hover:bg-gray-400 rounded">
+                        <i class="fa fa-phone hover:text-green-600 text-xl"></i>
+                    </button>
+                    <button class="hover:bg-gray-400 rounded">
+                        <i class="fa fa-archive hover:text-red-600 text-xl"></i>
+                    </button>
+                    <input type="text" placeholder="Message..." class="appearance-none focus:outline-none border-2 rounded border-gray-400 col-span-7 font-body-font text-xl p-1 text-gray-700">
+                    <button class="">
+                        <i class="fa fa-paper-plane text-xl text-green-500"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -291,7 +323,7 @@
         <p class="inline-flex px-2 items-center">
         Made with <i class="fa fa-heart px-1 text-green-300 hover:text-red-700"></i> in <img src="./images/icons8-html-5.svg" alt="html-5-logo" class="w-8 h-18"> |
         </p>
-        <p>
+        <p class="font-body-font">
             Icons By 
             <a target="_blank" href="https://icons8.com" class="underline bg-blue-500 p-2 rounded-md text-white font-bold">Icons8 ➔</a>
             <a target="_blank" href="https://fontawesome.com/v4/icons" class="underline p-2 rounded-md text-blue-800 font-bold">Fontawesome ➔</a>

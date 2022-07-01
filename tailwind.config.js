@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "index.html",
+    "./html/**/*.html"
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -8,7 +11,15 @@ module.exports = {
         "body-font": ["Nunito", "sans-serif"],
         "standout-font": ["Oswald", "sans-serif"],
       },
+
+      backgroundImage: {
+        "cuttlery-main": "url('./images/cutlery-land-images/main-welcome-img.jpg')"
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  "daisyui": {
+    "prefix": "daisyui-"
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="garden">
+<html lang="en" data-theme="garden" id="parent-element">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -258,14 +258,14 @@
                 </div>
                 <div class="grid grid-cols-10 p-2">
                     <button class="hover:bg-gray-400 rounded">
-                        <i class="fa fa-phone hover:text-green-600 text-xl"></i>
+                        <i class="fa fa-phone text-primary text-xl"></i>
                     </button>
                     <button class="hover:bg-gray-400 rounded">
-                        <i class="fa fa-archive hover:text-red-600 text-xl"></i>
+                        <i class="fa fa-archive text-primary text-xl"></i>
                     </button>
-                    <input type="text" placeholder="Message..." class="appearance-none focus:outline-none border-none rounded col-span-7 font-body-font text-xl p-1 text-gray-700 bg-secondary">
+                    <input type="text" placeholder="Message..." class="appearance-none focus:outline-none border-none rounded col-span-7 font-body-font text-xl p-1 text-gray-700">
                     <button class="">
-                        <i class="fa fa-paper-plane text-xl text-green-500"></i>
+                        <i class="fa fa-paper-plane text-xl text-primary"></i>
                     </button>
                 </div>
             </div>
@@ -275,7 +275,7 @@
     <div class="sticky bottom-0 flex justify-between md:justify-center md:space-x-5 items-center p-1 w-full bg-primary/30 py-2 backdrop-blur-lg">
         <div class="daisyui-dropdown daisyui-dropdown-hover daisyui-dropdown-top">
             <label tabindex="0">
-                <img src="./images/random-man-image.jpg" alt="profile-image" class="daisyui-mask daisyui-mask-hexagon-2 w-12 h-12 border-green-700 border-2">
+                <img src="./images/random-man-image.jpg" alt="profile-image" class="daisyui-mask daisyui-mask-hexagon-2 w-12 h-12 border-2">
             </label>
             <ul class="daisyui-dropdown-content daisyui-menu bg-base-100 w-52 rounded-md">
                 <li>
@@ -308,7 +308,29 @@
             <button class="daisyui-btn daisyui-btn-ghost text-black">
                 <i class="fa fa-refresh text-base"></i>
             </button>
+
+            <button class="daisyui-btn daisyui-btn-ghost text-black" onclick="changeToDarkMode()">
+                <i class="fa fa-moon-o text-base font-bold" id="dark-or-light"></i>
+            </button>
         </div>
     </div>
+
+<script>
+    function changeToDarkMode() {
+        const targetElement = document.getElementById("parent-element");
+        const targetElementAttributeValue = targetElement.getAttribute("data-theme");
+
+        const themeIcon = document.getElementById("dark-or-light");
+
+        if(targetElementAttributeValue == "dark") {
+            targetElement.setAttribute("data-theme", "garden");
+            themeIcon.className = "fa fa-moon-o text-base font-bold";
+
+        } else if(targetElementAttributeValue == "garden") {
+            targetElement.setAttribute("data-theme", "dark");
+            themeIcon.className = "fa fa-sun-o text-base font-bold";
+        }
+    }
+</script>
 </body>
 </html>

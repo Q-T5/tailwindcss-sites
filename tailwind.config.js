@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports =  {
   content: [
     "index.html",
     "./html/**/*.html"
@@ -13,8 +13,8 @@ module.exports = {
       },
 
       backgroundImage: {
-        "cuttlery-main": "url('./images/cutlery-land-images/main-welcome-img.jpg')"
-      }
+        "cuttlery-main": "url('images/cutlery-land-images/sample-image-1.jpg')"
+      },
     },
   },
   plugins: [require("daisyui")],

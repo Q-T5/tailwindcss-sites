@@ -1,32 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="garden">
 <head>
     <meta charset="UTF-8" data-theme="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>Cuttlers</title>
 </head>
 <body>
-    <nav class="sticky top-0 bg-red-300 py-4">
-        Navbar
+    <nav class="sticky top-0 py-1 z-20 flex justify-between items-center px-2 shadow-md backdrop-blur-lg">
+        <div class="hidden md:flex">
+            <ul class="inline-flex space-x-1">
+                <li><a href="#home" class="menu-btns">Home</a></li>
+                <li><a href="#about-us" class="menu-btns">About Us</a></li>
+                <li><a href="#gallery" class="menu-btns">Gallery</a></li>
+                <li><a href="#contact-us" class="menu-btns">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="inline-flex items-center space-x-2 relative">
+            <img src="/images/cutlery-land-images/cutlery-logo.png" alt="cuttlers-logo" class="w-12 absolute left-16 -z-10">
+            <span class="text-4xl font-standout-font font-semibold tracking-wide">Cuttlers</span>
+        </div>
+
+        <div class="daisyui-dropdown daisyui-dropdown-left daisyui-dropdown-hover md:hidden">
+            <label tabindex="0" class="mr-2 daisyui-btn daisyui-btn-ghost daisyui-btn-circle">
+                <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+            </label>
+            <ul class="daisyui-dropdown-content daisyui-menu w-52 rounded-sm uppercase font-bold text-black bg-yellow-500">
+                <li><a href="#home" class="hover:text-white">Home</a></li>
+                <li><a href="#about-us" class="hover:text-white">About Us</a></li>
+                <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+                <li><a href="#home" class="hover:text-white">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
     
-    <main class="bg-green-300">
-        <div class="bg-red-400 bg-cover max-h-full">
-            <img src="/images/cutlery-land-images/main-welcome-img.jpg" alt="" class="object-cover">
-        </div>Landing Page
+    <main class="bg-cover" style="background-image: url('/images/cutlery-land-images/sample-image-3.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
+        <div class="bg-cover max-h-full text-yellow-500" id="home">
+            <div class="backdrop-blur-sm flex flex-col justify-center items-center flex-wrap">
+                <h2 class="text-6xl font-heading-font">Welcome to <span class="italic">Cuttlers</span></h2>
+                <h3 class="text-3xl font-standout-font underline">Where We Serve You Right</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex non necessitatibus neque nihil quo exercitationem sed, consequuntur laudantium soluta fuga tempore inventore nam, doloremque et optio dolorem hic? Tempora, doloremque!
+                </p>
+            </div>
+        </div>
 
-        <div class="bg-pink-300">
+        <div class="bg-pink-300" id="about-us">
             About us
         </div>
 
-        <div class="bg-purple-300">
-            Gallery
+        <div class="grid grid-cols-2 justify-items-center items-center" id="gallery">
+            <div class="text-center col-span-3">
+                Gallery
+            </div>
+            <div class="images-slideshow p-3 relative">
+                <div class="imageSlides relative">
+                    <img src="/images/cutlery-land-images/slider-1.jpg" class="rounded-xl h-[35rem]" />
+                </div>
+
+                <div class="imageSlides relative">
+                    <img src="/images/cutlery-land-images/slider-2.jpg" class="rounded-xl h-[35rem]" />
+                </div>
+
+                <div class="imageSlides relative">
+                    <img src="/images/cutlery-land-images/slider-4.jpg" class="rounded-xl h-[35rem]" />
+                </div>
+
+                <div class="imageSlides relative">
+                    <img src="/images/cutlery-land-images/slider-5.jpg" class="rounded-xl h-[35rem]" />
+                </div>
+
+                <div class="imageSlides relative">
+                    <img src="/images/cutlery-land-images/slider-6.jpg" class="rounded-xl h-[35rem]" />
+                </div>
+                <a class="absolute left-3 bottom-64 daisyui-btn daisyui-btn-circle" onclick="setSlides(-1)">❮</a>
+                <a class="absolute right-3 bottom-64 daisyui-btn daisyui-btn-circle" onclick="setSlides(1)">❯</a>
+            </div>
+
+            <div class="ml-2">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error vel incidunt cum iste expedita accusantium autem libero ad doloremque, ab quos tempore eligendi commodi rem facilis fuga quis aspernatur. Blanditiis!
+            </div>
         </div>
 
-        <div class="bg-red-500">
+        <div class="bg-red-500" id="contact-us">
             Contact us
         </div>
     </main>
@@ -35,7 +93,23 @@
         Footer
     </footer>
 
-    <img src="/images/random-person-image.jpg" alt="" class="daisyui-mask daisyui-mask-hexagon w-20 h-20">
-    <button class="daisyui-btn daisyui-btn-secondary daisyui-btn-full">Click Me</button>
+<script>
+    let currentIndex = 1;
+    displaySlides(currentIndex);
+
+    function setSlides(num) {
+        displaySlides(currentIndex += num);
+    }
+
+    function displaySlides(num) {
+        let slides = document.getElementsByClassName("imageSlides");
+        if (num > slides.length) { currentIndex = 1 }
+        if (num < 1) { currentIndex = slides.length }
+        for (x = 0; x < slides.length; x++) {
+            slides[x].style.display = "none";
+        }
+        slides[currentIndex - 1].style.display = "block";
+    }
+</script>
 </body>
 </html>

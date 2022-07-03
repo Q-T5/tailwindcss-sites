@@ -9,3 +9,7 @@
 .heading {
     @apply text-3xl text-red-300;
 }
+
+.menu-btns {
+    @apply daisyui-btn daisyui-btn-ghost rounded-sm uppercase hover:underline hover:text-yellow-700 
+}
